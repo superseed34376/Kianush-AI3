@@ -4,7 +4,8 @@ import json
 
 app = Flask(__name__)
 
-GROQ_API_KEY = "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"
+import os
+GROQ_API_KEY = os.environ.get("GROQ_API_KEY")
 DEFAULT_MODEL  = "llama-3.3-70b-versatile"
 SYSTEM_PROMPT  = (
     "You are Kianush AI, a brilliant AI assistant. "
